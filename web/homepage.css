@@ -1,0 +1,28 @@
+body{
+	background-color: black;
+}
+
+h1 {
+	color: blue;
+	text-align: center;
+}
+
+p {
+	color:green; font-family:fantasy; font-size:140%;
+        text-align:center;
+}
+
+div {
+	color:red; font-size: 150%; font-family: fantasy;
+}
+
+#family {
+	text-align: center;
+	background-image: url("family.jpg");
+	width:304px;
+	height:228px;
+}
+
+#family:hover {
+	background-image: url("scary.jpg");
+	}
