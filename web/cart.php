@@ -12,6 +12,7 @@ session_start();
 echo "Here is what is currently in your shopping cart.";
 echo "<br>";
 print_r($_SESSION);
+echo $_SESSION["b1"];
 echo "<br>";
 echo "Anything you would like to add?";
 ?>
