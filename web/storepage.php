@@ -24,6 +24,8 @@ session_start();
                                 <li><input type="checkbox" name="book4" id="4" value="value4" onclick="total()">
                                 Magic Book of Math Tricks by Donald McGregory...............$15.95</li>
                         </ul>
+                        <input type="submit" />
+                        </form>
 
                         <p align="center">Total:<input type="textbox" id="total"><?php $_SESSION["total"] = document.getElementById("total").value; ?>
                         <span style="color:red; visibility:hidden" id="eTotal">Invalid Total</span></p>
@@ -50,8 +52,7 @@ $_SESSION["b4"] = "Magic Book of Math Tricks by Donald McGregory"; $_SESSION["n4
 ?>
 
                         
-                        <input type="submit" />
-                        </form>
+                        
                          <button onclick="reset()">Reset</button>
 
 
