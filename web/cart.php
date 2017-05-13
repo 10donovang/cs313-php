@@ -11,8 +11,7 @@ session_start();
 
 echo "Here is what is currently in your shopping cart.";
 echo "<br>";
-print_r($_SESSION);
-echo $_SESSION["b1"];
+
 echo "<br>";
 echo "Anything you would like to add?";
 ?>
@@ -77,6 +76,7 @@ The Deft Book of Magic by Donald McGregor </div>
 Magic Book of Math Tricks by Donald McGregory </div>
 <br>
 <br>
+
 <?php
 echo "Your final cart and total:";
 
@@ -85,15 +85,15 @@ $_SESSIONS["n2"] += $_POST['book2'];
 $_SESSIONS["n3"] += $_POST['book3'];
 $_SESSIONS["n4"] += $_POST['book4'];
 
-echo "The Best Magic Tricks of All Times by Donald McGregor: " . $_SESSIONS["n1"] . <br>;
+echo "The Best Magic Tricks of All Times by Donald McGregor: " . $_SESSIONS["n1"] . "<br>";
 
 
 
-echo "Math Tricks for All Times by Donald McGregor: " . $_SESSIONS["n2"] . <br>;
+echo "Math Tricks for All Times by Donald McGregor: " . $_SESSIONS["n2"] . "<br>";
 
-echo "The Deft Book of Magic by Donald McGregor: " . $_SESSIONS["n3"] . <br>;
+echo "The Deft Book of Magic by Donald McGregor: " . $_SESSIONS["n3"] . "<br>";
 
-echo "Magic Book of Math Tricks by Donald McGregory: " . $_SESSIONS["n4"] . <br>;
+echo "Magic Book of Math Tricks by Donald McGregory: " . $_SESSIONS["n4"] . "<br>";
 
 $_SESSIONS["total"] = $_SESSIONS["n1"] * 4.95 + $_SESSIONS["n2"] * 20 + $_SESSIONS["n3"] * 25.95 + $_SESSIONS["n4"] * 15.95;
 
