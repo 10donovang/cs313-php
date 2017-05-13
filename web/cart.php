@@ -79,28 +79,27 @@ Magic Book of Math Tricks by Donald McGregory </div>
 <?php
 echo "Your final cart and total:";
 
-echo "The Best Magic Tricks of All Times by Donald McGregor: " . $_SESSIONS["n1"] + $_POST['book1'];
-
 $_SESSIONS["n1"] += $_POST['book1'];
-
-echo "Math Tricks for All Times by Donald McGregor: " . $_SESSIONS["n2"] + $_POST['book2'];
-
 $_SESSIONS["n2"] += $_POST['book2'];
-
-echo "The Deft Book of Magic by Donald McGregor: " . $_SESSIONS["n3"] + $_POST['book3'];
-
 $_SESSIONS["n3"] += $_POST['book3'];
-
-echo "Magic Book of Math Tricks by Donald McGregory: " . $_SESSIONS["n4"] + $_POST['book4'];
-
 $_SESSIONS["n4"] += $_POST['book4'];
+
+echo "The Best Magic Tricks of All Times by Donald McGregor: " . $_SESSIONS["n1"];
+
+
+
+echo "Math Tricks for All Times by Donald McGregor: " . $_SESSIONS["n2"];
+
+echo "The Deft Book of Magic by Donald McGregor: " . $_SESSIONS["n3"];
+
+echo "Magic Book of Math Tricks by Donald McGregory: " . $_SESSIONS["n4"];
 
 $_SESSIONS["total"] = $_SESSIONS["n1"] * 4.95 + $_SESSIONS["n2"] * 20 + $_SESSIONS["n3"] * 25.95 + $_SESSIONS["n4"] * 15.95;
 
 echo money_format("Total: %i", $_SESSIONS["total"]);
 ?>
 
-<form action="storepage.php" id="form1" method="post" >
+<form action="storepage.html" id="form1" method="post" >
       <input type="submit" value="Return"/>
     </form>
 

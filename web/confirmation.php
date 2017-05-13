@@ -15,7 +15,7 @@ session_start();
 
 	echo "Magic Book of Math Tricks by Donald McGregory: " . $_SESSIONS["n4"];
 
-	echo "<br> Name: " . $_POST["name"] . "<br>";
+	echo "<br><br> Name: " . $_POST["name"] . "<br>";
 	echo "E-mail: " . $_POST["email"] . "<br>";
 	echo "Phone: " . $_POST["phone"] . "<br>";
 	echo "Address: " . $_POST["address"] . " " . $_POST["city"] . ", " . $_POST["state"] . " " . $_POST["zip"];
