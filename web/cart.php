@@ -80,20 +80,20 @@ Magic Book of Math Tricks by Donald McGregory </div>
 <?php
 echo "Your final cart and total:";
 
-$_SESSIONS["n1"] += $_POST['book1'];
-$_SESSIONS["n2"] += $_POST['book2'];
-$_SESSIONS["n3"] += $_POST['book3'];
-$_SESSIONS["n4"] += $_POST['book4'];
+$nums1 = $_SESSIONS["n1"] + $_POST['book1'];
+$nums2 = $_SESSIONS["n2"] + $_POST['book2'];
+$nums3 = $_SESSIONS["n3"] + $_POST['book3'];
+$nums4 = $_SESSIONS["n4"] + $_POST['book4'];
 
-echo "The Best Magic Tricks of All Times by Donald McGregor: " . $_SESSIONS["n1"];
+echo "The Best Magic Tricks of All Times by Donald McGregor: " . $nums1 . <br>;
 
 
 
-echo "Math Tricks for All Times by Donald McGregor: " . $_SESSIONS["n2"];
+echo "Math Tricks for All Times by Donald McGregor: " . $nums2 . <br>;
 
-echo "The Deft Book of Magic by Donald McGregor: " . $_SESSIONS["n3"];
+echo "The Deft Book of Magic by Donald McGregor: " . $nums3 . <br>;
 
-echo "Magic Book of Math Tricks by Donald McGregory: " . $_SESSIONS["n4"];
+echo "Magic Book of Math Tricks by Donald McGregory: " . $nums4 . <br>;
 
 $_SESSIONS["total"] = $_SESSIONS["n1"] * 4.95 + $_SESSIONS["n2"] * 20 + $_SESSIONS["n3"] * 25.95 + $_SESSIONS["n4"] * 15.95;
 
