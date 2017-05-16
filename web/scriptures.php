@@ -17,20 +17,14 @@
 
 
         <?php
-        if(isset($_GET['book'])){
-        $book = filter_input(INPUT_GET, 'book', FILTER_SANITIZE_STRING);
-        $books = getBook($book);
-
-        foreach($books as $scripture){
-        	echo "<p><strong>" . $scripture['book'] . " " . $scripture['chapter'] . ":" . $scripture['verse'] . '</strong> - <a href="scriptures.php?id=' . $scripture['scripture_id'] . '"> View Scripture</a></p>';
-}
-}
+       
 
         $scriptures = getScriptures();
         foreach($scriptures as $scripture){
         	echo "<p><strong>" . $scripture['book'] . " " . $scripture['chapter'] . ":" . $scripture['verse'] . '</strong> - <a href="scriptures.php?id=' . $scripture['scripture_id'] . '"> View Scripture</a></p>';
         }
     }
+    
 
     if(isset($_GET['id'])){
     	$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
@@ -39,6 +33,14 @@
         	echo "<p><strong>" . $scripture['book'] . " " . $scripture['chapter'] . ":" . $scripture['verse'] . '</strong> - "' . $scripture['content'] . '"</p>';
         }
     }
+     if(isset($_GET['book'])){
+        $book = filter_input(INPUT_GET, 'book', FILTER_SANITIZE_STRING);
+        $books = getBook($book);
+
+        foreach($books as $scripture){
+        	echo "<p><strong>" . $scripture['book'] . " " . $scripture['chapter'] . ":" . $scripture['verse'] . '</strong> - <a href="scriptures.php?id=' . $scripture['scripture_id'] . '"> View Scripture</a></p>';
+}       
+}
 
 
         ?>
