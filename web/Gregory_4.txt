@@ -1,0 +1,25 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Describe something from your database that you think came together very nicely.
+
+I liked the interaction between all of my tables. I feel like it is simple but complex enough to do what I want. 
+
+
+2. Describe something from your database that you think could be improved or extended in the future.
+
+I think I am going to keep all of the user information on one table but if I could figure it out, it would be nice to have a different table for each new user. 
+
+3. Briefly describe the "coolest" thing you learned while completing this assignment.
+How to set up heroku databases. Though I am very nervous if I got it right. I am not worried about my code, more accessing the database with heroku. 
+
+4. Briefly describe two principles of good database design.
+Dividing the information into different tables in order to reduce redundency. Also determining the purpose of the database before hand.
+
+5. Please select the category you feel best describes your assignment:
+
+E - Shows creativity and excels above and beyond requirements
+
+
+6. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I created all of the databases needed for my project in the most effecent way possible. I also made each of the keys that I wanted not null. Though I do wish I had added the contraints to the table itself instead of waiting until after. I had to drop all of my tables and recreate them. 

@@ -97,7 +97,7 @@ echo "Magic Book of Math Tricks by Donald McGregory: " . $_SESSIONS["n4"] . "<br
 
 $_SESSIONS["total"] = $_SESSIONS["n1"] * 4.95 + $_SESSIONS["n2"] * 20 + $_SESSIONS["n3"] * 25.95 + $_SESSIONS["n4"] * 15.95;
 
-echo money_format("Total: %i", $_SESSIONS["total"]);
+echo money_format("Total: $%i", $_SESSIONS["total"]);
 ?>
 
 <form action="storepage.html" id="form1" method="post" >
