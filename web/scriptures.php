@@ -8,9 +8,13 @@ ini_set("display_errors", 1);
         require ('model.php');
         require ('connect.php');
         echo "<h1><strong>Scripture Resources</strong></h1>";
-        if(!isset($_GET)){
+        if(!isset($_GET['id']) && !isset($_GET['book'])){
         
-        
+        echo '
+        <form action="scriptures.php" method="GET">
+        <input type="text" name="book">
+        <input type="submit" value="Search">
+         </form>';
 
 
         
