@@ -2,6 +2,9 @@
 <html>
         <body>
         <?php
+
+		error_reporting(E_ALL);
+		ini_set("display_errors", 1);
         require ('model.php');
         require ('connect.php');
         echo "<h1><strong>Scripture Resources</strong></h1>";
