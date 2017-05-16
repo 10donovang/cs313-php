@@ -10,11 +10,7 @@ ini_set("display_errors", 1);
         echo "<h1><strong>Scripture Resources</strong></h1>";
         if(!isset($_GET)){
         
-        echo '
-        <form action="scriptures.php" method="GET">
-        <input type="text" name="book">
-        <input type="submit" value="Search">
-         </form>';
+        
 
 
         
