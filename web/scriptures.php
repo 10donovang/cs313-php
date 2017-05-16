@@ -10,7 +10,7 @@
         if(!isset($_GET['view'])){
         $scriptures = getScripture();
         foreach($scriptures as $scripture){
-        	echo "<p><strong>" . $scripture['book'] . " " . $scripture['chapter'] . ":" . $scripture['verse'] . '</strong> - <a href="scriptures.php?id=' . $scripture['id'] . '"> View Scripture</a></p>';
+        	echo "<p><strong>" . $scripture['book'] . " " . $scripture['chapter'] . ":" . $scripture['verse'] . '</strong> - <a href="scriptures.php?id=' . $scripture['scripture_id'] . '"> View Scripture</a></p>';
         }
     }
 
