@@ -9,17 +9,17 @@ ini_set("display_errors", 1);
         require ('connect.php');
         echo "<h1><strong>Scripture Resources</strong></h1>";
         if(!isset($_GET)){
-        ?>
         
+        echo '
         <form action="scriptures.php" method="GET">
         <input type="text" name="book">
         <input type="submit" value="Search">
-         </form>
+         </form>';
 
 
-        <?php
-       
         
+       
+
         $scriptures = getScriptures();
         foreach($scriptures as $scripture){
         	echo "<p><strong>" . $scripture['book'] . " " . $scripture['chapter'] . ":" . $scripture['verse'] . '</strong> - <a href="scriptures.php?id=' . $scripture['scripture_id'] . '"> View Scripture</a></p>';
