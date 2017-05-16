@@ -8,7 +8,7 @@
         require ('model.php');
         require ('connect.php');
         echo "<h1><strong>Scripture Resources</strong></h1>";
-        $scriptures = getScriptures();
+        $scriptures = getScripture();
         foreach($scriptures as $scripture){
         	echo "<p><strong>" . $scripture['book'] . " " . $scripture['chapter'] . ":" . $scripture['verse'] . '</strong> - "' . $scripture['content'] . '"</p>';
         }
