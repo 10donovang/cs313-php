@@ -20,7 +20,7 @@ function getScripture($id){
     return $scripture;
 }
 
-function getScripture($book){
+function getBook($book){
     global $db;
     $query = 'SELECT * FROM scriptures WHERE book = :book';
     $statement = $db->prepare($query);
