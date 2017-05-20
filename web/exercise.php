@@ -9,7 +9,7 @@ ini_set("display_errors", 1);
         require ('connect.php');
         echo "<h1><strong>Workout Selection</strong></h1>";
         echo'
-        <form action="exercise_mainpage.php">
+        <form action="exercise.php">
     <select name="type">
     <option value="Cross Fit">Cross Fit</option>
     </select>
@@ -21,12 +21,6 @@ ini_set("display_errors", 1);
     <br><br>
     <input type="submit">
     </form>';
-
-    $workouts = getWorkoutChoice($_POST["time"], $_POST["type"]);
-        foreach($workouts as $workout){
-            echo "<p><strong>" . $workout['workout_name'] . ":" . $workout['workout_type'] . " " . $scripture['duration'] .'</p>';
-        }
         ?>
         </body>
         </html>
-         
