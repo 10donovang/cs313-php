@@ -1,7 +1,7 @@
 <?php
 function getWorkoutChoice($time, $type){
     global $db;
-    $query = 'SELECT * FROM workouts WHERE duration = :time';
+    $query = 'SELECT * FROM workouts';
     $statement = $db->prepare($query);
     $statement->execute();
     $workouts = $statement->fetchAll();
