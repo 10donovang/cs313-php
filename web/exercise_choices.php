@@ -11,7 +11,7 @@ ini_set("display_errors", 1);
     $workouts = getWorkoutChoice($time, $type);
     
         foreach($workouts as $workout){
-            echo "<p><strong>" . $workout['workout_name'] . ":" . $workout['workout_type'] . " " . $workout['duration'] .'</p>';
+            echo "<p><strong><a href='exercise_choices.php?id=" . $workout['id'] . '">' $workout['workout_name'] . "</a></strong>:" . $workout['workout_type'] . " " . $workout['duration'] .'</p>';
         }
 
           ?>
