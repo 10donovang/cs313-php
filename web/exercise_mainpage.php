@@ -26,7 +26,7 @@ ini_set("display_errors", 1);
     $time = "'" . $_GET['time'] . "'";
     $type = "'" . $_GET['type'] . "'";
     $workouts = getWorkoutChoice($time, $type);
-    echo implode($workouts);
+    
         foreach($workouts as $workout){
             echo "<p><strong>" . $workout['workout_name'] . ":" . $workout['workout_type'] . " " . $workout['duration'] .'</p>';
         }
