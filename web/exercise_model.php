@@ -8,5 +8,15 @@ function getWorkoutChoice($time, $type){
     $statement->closeCursor();
     return $workouts;
 }
+
+function getWorkout($id){
+    global $db;
+    $query = "SELECT * FROM workout_routine WHERE workout_id like $id";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $workouts = $statement->fetchAll();
+    $statement->closeCursor();
+    return $routine;
+}
 ?>
 
