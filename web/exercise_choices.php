@@ -18,7 +18,7 @@ ini_set("display_errors", 1);
 
     if(isset($_GET['id'])){
 
-$id = "'" . $_GET['id'] . "'";
+$id =  $_GET['id'];
 
 $routines = getWorkout($id);
 echo implode(" ", $routines);

@@ -11,7 +11,7 @@ function getWorkoutChoice($time, $type){
 
 function getWorkout($id){
     global $db;
-    $query = "SELECT * FROM workout_routine WHERE workout_id like $id";
+    $query = "SELECT * FROM workout_routine WHERE workout_id = $id";
     $statement = $db->prepare($query);
     $statement->execute();
     $routine = $statement->fetchAll();
