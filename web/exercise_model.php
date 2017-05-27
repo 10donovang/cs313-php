@@ -1,5 +1,5 @@
 <?php
-function getWorkoutChoice($){
+function getWorkoutChoice(){
     global $db;
     $query = 'SELECT * FROM workouts';
     $statement = $db->prepare($query);
