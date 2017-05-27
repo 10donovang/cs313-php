@@ -14,7 +14,7 @@ ini_set("display_errors", 1);
         require ('exercise_model.php');
         require ('connect.php');
         echo "<h1><strong>Workout Selection</strong></h1>";
-        $SESSION['1'] = $_POST['time'];
+        
         echo'
         <form action="exercise_choices.php" method="POST">
     <select name="type">
@@ -28,6 +28,7 @@ ini_set("display_errors", 1);
     <br><br>
     <input type="submit">
     </form>';
+    $SESSION['time'] = $_POST['time'];
    
         ?>
         </body>
