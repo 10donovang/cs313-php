@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $SESSION['time'] = $_POST['time'];
+    ?>
+
 <!DOCTYPE html>
 <html>
         <body>
