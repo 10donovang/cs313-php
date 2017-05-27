@@ -22,7 +22,7 @@ ini_set("display_errors", 1);
     <input type="submit">
     </form>';
 
-    $workouts = getWorkoutChoice($_POST["time"], $_POST["type"]);
+    $workouts = getWorkoutChoice($_GET['time'], $_GET['type']);
         foreach($workouts as $workout){
             echo "<p><strong>" . $workout['workout_name'] . ":" . $workout['workout_type'] . " " . $scripture['duration'] .'</p>';
         }
