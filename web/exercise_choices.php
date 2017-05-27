@@ -20,7 +20,6 @@ ini_set("display_errors", 1);
 
 $id = "'" . $_GET['id'] . "'";
 $routines = getWorkout($id);
-echo $routines;
 }
 }
           ?>
