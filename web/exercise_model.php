@@ -14,7 +14,7 @@ function getWorkout($id){
     $query = "SELECT * FROM workout_routine WHERE workout_id like $id";
     $statement = $db->prepare($query);
     $statement->execute();
-    $workouts = $statement->fetchAll();
+    $routine = $statement->fetchAll();
     $statement->closeCursor();
     return $routine;
 }
