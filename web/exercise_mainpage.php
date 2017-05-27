@@ -11,7 +11,7 @@ ini_set("display_errors", 1);
         require ('connect.php');
         echo "<h1><strong>Workout Selection</strong></h1>";
         echo'
-        <form action="exercise_choices.php" method="GET">
+        <form action="exercise_choices.php" method="POST">
     <select name="type">
     <option value="Cross Fit">Cross Fit</option>
     </select>

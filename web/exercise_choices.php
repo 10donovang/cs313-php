@@ -6,8 +6,8 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
  require ('exercise_model.php');
         require ('connect.php');
- $time = "'" . $_GET['time'] . "'";
-    $type = "'" . $_GET['type'] . "'";
+ $time = "'" . $_POST['time'] . "'";
+    $type = "'" . $_POST['type'] . "'";
     $workouts = getWorkoutChoice($time, $type);
     
         foreach($workouts as $workout){
