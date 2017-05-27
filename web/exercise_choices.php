@@ -21,7 +21,7 @@ ini_set("display_errors", 1);
 $id = "'" . $_GET['id'] . "'";
 
 $routines = getWorkout($id);
-echo explode($routines);
+echo explode(" ", $routines);
 foreach($routines as $routine){
 	echo "<p>" .$routine['workout_1'] . "</p>";
 }
