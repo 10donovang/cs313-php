@@ -13,8 +13,7 @@ ini_set("display_errors", 1);
 $user = "'" . $_POST['uname'] . "'";
 $pass = "'" . $_POST['pass'] . "'";
 $user = getUser($user, $pass);
-echo $user['first_name'];
-$id = $user['user_id'];
+echo $user;
 
 
 
