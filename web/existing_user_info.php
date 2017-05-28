@@ -39,4 +39,4 @@ echo $input['workout_date'] . ": " . $input['workout_notes'] . "<br><br>";
 
         ?>
         </body>
-        </html>}
+        </html>

@@ -1,0 +1,6 @@
+Project Title: Workout Routines for All
+Login information: username: 10donovang password: password
+(You can use mine it has some data in it already or you can create your own.)
+1. New Users: Set up a place for people to create a new user name and password along with basic information that is saved to a database of users. https://calm-depths-42678.herokuapp.com/new_user.php
+2. Existing Users: This is where the user can save what workouts he has done to his user name and password along with any notes he might need to keep. https://calm-depths-42678.herokuapp.com/existing_user.php
+3. See previous notes: This lets the user view all of the notes he has saved under his name. I plan on implementing a date system to search for notes based on certain days. https://calm-depths-42678.herokuapp.com/existing_user_info.php?id=(whatever the users_id is).
