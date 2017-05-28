@@ -22,12 +22,12 @@ function getWorkout($id){
 function saveUser($first, $middle, $last, $user, $pass){
     global $db;
     $query = "INSERT INTO users VALUES (NEXTVAL('users_s1')
-, 'Chloe'
-, 'A'
-, 'Gregory'
+, $first
+, $middle
+, $last
 , current_date
-, 'caw'
-, 'pass'
+, $user
+, $pass
 )";
     $statement = $db->prepare($query);
     $statement->execute();

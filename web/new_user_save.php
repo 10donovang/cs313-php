@@ -15,10 +15,10 @@ $middle = "'" . $_POST['mname'] . "'";
 $last = "'" . $_POST['lname'] . "'";
 $user = "'" . $_POST['uname'] . "'";
 $pass = "'" . $_POST['pass'] . "'";
-
+saveUser($first, $middle, $last, $user, $pass);
 $users = getUser($user, $pass);
 foreach($users as $user){
-            echo "<p>" . $user['first_name'] ."</p>";}
+            echo  $user['first_name'];}
 
 
 
