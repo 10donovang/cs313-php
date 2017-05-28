@@ -12,9 +12,9 @@ ini_set("display_errors", 1);
         
 $user = "'" . $_POST['uname'] . "'";
 $pass = "'" . $_POST['pass'] . "'";
-$user = getUser($user, $pass);
-
-$id = $user['user_id'];
+$users = getUser($user, $pass);
+foreach($users as $user){
+$id = $user['user_id'];}
 
 
 
