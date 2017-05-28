@@ -20,10 +20,7 @@ $users = getUser($user, $pass);
 foreach($users as $user){
             echo  $user['first_name'] . " " . $user['middle_name'] . " " $user['last_name'] . " Username: " . $user['user_name'] . " Password: " . $user['password'];}
 
-            echo '<br><br><br> Click here to insert your workout information.
-            <form action="existing_user.php" method="POST">
-    <input type="submit" value="Submit">
-    </form>';
+            
 
 
 
