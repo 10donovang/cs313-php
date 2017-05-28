@@ -18,13 +18,9 @@ $id = $user['user_id'];}
 
 
 
-echo '<form action="" method="get">
-Workout Name: <input type="text" name="wname"><br>
 
-<input type="submit">
-</form> '
 
-$wname = "'" . $_GET['wname'] . "'";
+$wname = "'" . $_POST['wname'] . "'";
 $workout = getWorkoutByName($wname);
 }
 
