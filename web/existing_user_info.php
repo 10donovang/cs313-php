@@ -21,13 +21,17 @@ foreach($workouts as $workout){
 $wid = $workout['workout_id'];}
 $notes = "'" . $_POST['notes'] . "'";
 saveUserNotes($id, $wid, $notes);
-echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $id . "'>here.</a>";
+echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $id . "'>here.</a><br>";
 echo "To go back to workout selection press <a href='exercise_mainpage.php'> here. </a>";
 
 }
 
  if(isset($_GET['id'])){
-
+$id = $_GET['id'];
+$data = getInfo($id);
+foreach($data as $input){
+echo $input['workout_date'] . ": " . $input['workout_notes'] . "<br><br>";
+}
  }
 
 
@@ -35,4 +39,4 @@ echo "To go back to workout selection press <a href='exercise_mainpage.php'> her
 
         ?>
         </body>
-        </html>
+        </html>}

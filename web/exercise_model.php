@@ -64,5 +64,16 @@ function saveUserNotes($id, $wid, $notes){
     $statement = $db->prepare($query);
     $statement->execute();
 }
+
+function getInfo($id){
+    global $db;
+    $query = "SELECT * FROM user_Saves WHERE user_id = $id";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $routine = $statement->fetchAll();
+    $statement->closeCursor();
+    return $routine;
+}
+
 ?>
 
