@@ -19,15 +19,7 @@ Password: <input type="text" name="pass"><br>
 <input type="submit">
 </form> '}
 
-if(isset($_GET['id'])){
 
-$first = "'" . $_GET['fname'] . "'";
-$middle = "'" . $_GET['mname'] . "'";
-$last = "'" . $_GET['lname'] . "'";
-$user = "'" . $_GET['uname'] . "'";
-$pass = "'" . $_GET['pass'] . "'";
-
-}
 
 
         ?>
