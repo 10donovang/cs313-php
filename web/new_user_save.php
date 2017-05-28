@@ -18,8 +18,7 @@ $pass = "'" . $_POST['pass'] . "'";
 
 $users = saveUser($first, $middle, $last, $user, $pass);
 
-foreach($users as $user){
-            echo "<p>" . $user['first_name'] . "'>" .  $user['middle_name'] . " " . $user['last_name'] . " " . $user['user_name'] ."</p>";
+
 
 
 
