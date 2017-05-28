@@ -10,7 +10,7 @@ ini_set("display_errors", 1);
         require ('exercise_model.php');
         require ('connect.php');
         if(!isset($_GET['id'])){
-        echo '<form action="new_user.php?id=1" method="post">
+        echo '<form action="new_user.php" method="post">
 First Name: <input type="text" name="fname"><br>
 Middle Name: <input type="text" name="mname"><br>
 Last Name: <input type="text" name="lname"><br>
