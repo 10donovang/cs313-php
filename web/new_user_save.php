@@ -17,6 +17,8 @@ $user = "'" . $_POST['uname'] . "'";
 $pass = "'" . $_POST['pass'] . "'";
 
 $users = getUser($user, $pass);
+foreach($users as $user){
+            echo "<p>" . $user['first_name'] ."</p>";}
 
 
 
