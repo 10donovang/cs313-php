@@ -16,7 +16,7 @@ $last = "'" . $_POST['lname'] . "'";
 $user = "'" . $_POST['uname'] . "'";
 $pass = "'" . $_POST['pass'] . "'";
 
-$users = saveUser($first, $middle, $last, $user, $pass);
+$users = getUser($user, $pass);
 
 
 

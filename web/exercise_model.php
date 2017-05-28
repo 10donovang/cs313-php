@@ -36,5 +36,15 @@ function saveUser($first, $middle, $last, $user, $pass){
     return $user;
 }
 
+function getUser($user, $pass){
+    global $db;
+    $query = "SELECT * FROM users WHERE user_name = $user AND password = $pass";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $user = $statement->fetchAll();
+    $statement->closeCursor();
+    return $user;
+}
+
 ?>
 
