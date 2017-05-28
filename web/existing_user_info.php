@@ -18,6 +18,7 @@ $id = $user['user_id'];}
 $wname = "'" . $_POST['wname'] . "'";
 $workouts = getWorkoutByName($wname);
 foreach($workouts as $workout){
+    echo $workout['workout_name'];
 $wid = $workout['workout_id'];}
 $notes = "'" . $_POST['notes'] . "'";
 saveUserNotes($id, $wid, $notes);
