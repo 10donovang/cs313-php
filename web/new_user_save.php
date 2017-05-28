@@ -18,7 +18,7 @@ $pass = "'" . $_POST['pass'] . "'";
 saveUser($first, $middle, $last, $user, $pass);
 $users = getUser($user, $pass);
 foreach($users as $user){
-            echo  $user['first_name'] . " " . $user['middle_name'] . " " $user['last_name'] . " Username: " . $user['user_name'] . " Password: " . $user['password'];}
+            echo  $user['first_name'] . " " . $user['middle_name'] . " " . $user['last_name'] . " Username: " . $user['user_name'] . " Password: " . $user['password'];}
 
             
 
