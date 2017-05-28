@@ -21,10 +21,13 @@ ini_set("display_errors", 1);
 $id =  $_GET['id'];
 
 $routines = getWorkout($id);
-echo implode(" ", $routines);
 foreach($routines as $routine){
-	echo "<p>" .$routine['workout_1'] . "</p>";
+	echo "<p>";
+	for($x = 1; $x <= 10; $x++){
+		$y = "'workout_" + $x + "'";
+		echo $routine[$y] . "<br>";
 }
+echo "</p>";
 }
           ?>
         </body>
