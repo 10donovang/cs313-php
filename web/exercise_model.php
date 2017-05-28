@@ -21,7 +21,7 @@ function getWorkout($id){
 
 function saveUser($first, $middle, $last, $user, $pass){
     global $db;
-    $query = "INSERT INTO users VALUES NEXTVAL('users_s1')
+    $query = "INSERT INTO users (user_id, first_name, middle_name, last_name, creation_date, user_name, password) VALUES (NEXTVAL('users_s1')
 , $first
 , $middle
 , $last
