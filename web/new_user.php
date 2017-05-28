@@ -12,7 +12,7 @@ ini_set("display_errors", 1);
         
         echo '<form action="new_user_save.php" method="post">
 First Name: <input type="text" name="fname"><br>
-Middle Name: <input type="text" name="mname"><br>
+Middle Inital: <input type="text" name="mname"><br>
 Last Name: <input type="text" name="lname"><br>
 User Name: <input type="text" name="uname"><br>
 Password: <input type="text" name="pass"><br>
