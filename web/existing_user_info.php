@@ -22,9 +22,13 @@ $wid = $workout['workout_id'];}
 $notes = "'" . $_POST['notes'] . "'";
 saveUserNotes($id, $wid, $notes);
 echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $id . "'>here.</a>";
+echo "To go back to workout selection press <a href='exercise_mainpage.php'> here. </a>";
 
 }
 
+ if(isset($_GET['id'])){
+
+ }
 
 
 
