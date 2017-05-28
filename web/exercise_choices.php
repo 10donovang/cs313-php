@@ -25,6 +25,24 @@ foreach($routines as $routine){
 	echo "<p>";
 	if($routine['workout_1'] != null)
 		echo $routine['workout_1'] . "<br>";
+	if($routine['workout_2'] != null)
+		echo $routine['workout_2'] . "<br>";
+	if($routine['workout_3'] != null)
+		echo $routine['workout_3'] . "<br>";
+	if($routine['workout_4'] != null)
+		echo $routine['workout_4'] . "<br>";
+	if($routine['workout_5'] != null)
+		echo $routine['workout_5'] . "<br>";
+	if($routine['workout_6'] != null)
+		echo $routine['workout_6'] . "<br>";
+	if($routine['workout_7'] != null)
+		echo $routine['workout_7'] . "<br>";
+	if($routine['workout_8'] != null)
+		echo $routine['workout_8'] . "<br>";
+	if($routine['workout_9'] != null)
+		echo $routine['workout_9'] . "<br>";
+	if($routine['workout_10'] != null)
+		echo $routine['workout_10'] . "<br>";
 }
 echo "</p>";
 }
