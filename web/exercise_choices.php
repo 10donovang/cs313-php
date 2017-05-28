@@ -23,8 +23,7 @@ $id =  $_GET['id'];
 $routines = getWorkout($id);
 foreach($routines as $routine){
 	echo "<p>";
-	for($x = 1; $x <= 10; $x++){
-		$y = "'workout_" . (string)$x . "'";
+	
 		echo $routine['workout_1'] . "<br>";
 }
 echo "</p>";
