@@ -1,0 +1,28 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+https://calm-depths-42678.herokuapp.com/exercise_mainpage.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/10donovang/cs313-php/tree/master/web
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+Right now the web page asks what type and duration of workout you would like to do. This does a query search based on selection that generates on the next page. The names of the workouts are highlight and when you chose on it does another search to generate the workout list with any special instructions. 
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+It is all technically working, though I would like to flesh it out more in the final week of the project. Add more options, things like that. 
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+I learned how to access my database through a webpage. That was pretty neat. I also found ways to manipulate variables in php. 
+
+6. Why should you create a separate user account for your application to access the database?
+I think it is in order to keep things seperate. 
+
+7. Please select the category you feel best describes your assignment:
+D - Meets requirements
+
+
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I completed the basic instructions. I have the the main php pages made for displaying the data. You are able to access the data. I am at a read only aspect so far. 

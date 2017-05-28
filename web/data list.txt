@@ -1,0 +1,4 @@
+Project Title: Workout Routines for All
+1. Workout Choices: A simple dropdown that lets the user choose the type and duration of their workout. https://calm-depths-42678.herokuapp.com/exercise_mainpage.php
+2. Routine choice: A list of different routines based on their prefrences. https://calm-depths-42678.herokuapp.com/exercise_choices.php
+3. Routine: The routine that they have chosen. https://calm-depths-42678.herokuapp.com/exercise_choices.php?id=(what ever the workout id is)
