@@ -19,7 +19,7 @@ function getWorkout($id){
     return $routine;
 }
 
-function getWorkout($name){
+function getWorkoutByName($name){
     global $db;
     $query = "SELECT * FROM workout_routine WHERE workout_name = $name";
     $statement = $db->prepare($query);

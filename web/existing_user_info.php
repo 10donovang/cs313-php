@@ -21,7 +21,7 @@ Notes: <textarea name="notes" cols="40" rows = "8"></textarea><br>
 </form> '
 
 $wname = "'" . $_GET['wname'] . "'";
-$workout = getWorkout($wname);
+$workout = getWorkoutByName($wname);
 
 
 
