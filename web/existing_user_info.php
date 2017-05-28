@@ -20,6 +20,7 @@ $workouts = getWorkoutByName($wname);
 foreach($workouts as $workout){
 $wid = $workout['workout_id'];}
 $notes = "'" . $_POST['notes'] . "'";
+saveUserNotes($id, $wid, $notes);
 
 
 

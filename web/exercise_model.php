@@ -53,5 +53,16 @@ function getUser($user, $pass){
     return $user;
 }
 
+function saveUserNotes($id, $wid, $notes){
+    global $db;
+    $query = "INSERT INTO user_saves VALUES (NEXTVAL('user_saves_s1')
+, $id
+, current_date
+, $wid
+, $notes
+)";
+    $statement = $db->prepare($query);
+    $statement->execute();
+}
 ?>
 
