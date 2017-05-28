@@ -9,16 +9,21 @@ ini_set("display_errors", 1);
 		
         require ('exercise_model.php');
         require ('connect.php');
-        echo '<form action="existing_user.php" method="post">
+        echo '<form action="new_user.php" method="post">
 First Name: <input type="text" name="fname"><br>
 Middle Name: <input type="text" name="mname"><br>
 Last Name: <input type="text" name="lname"><br>
 User Name: <input type="text" name="uname"><br>
 Password: <input type="text" name="pass"><br>
 <input type="submit">
-</form>
+</form> '
 
-        '
+$first = "'" . $_GET['fname'] . "'";
+$middle = "'" . $_GET['mname'] . "'";
+$last = "'" . $_GET['lname'] . "'";
+$user = "'" . $_GET['uname'] . "'";
+$pass = "'" . $_GET['pass'] . "'";
+
 
 
 
