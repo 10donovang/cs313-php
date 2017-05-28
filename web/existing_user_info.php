@@ -22,7 +22,7 @@ foreach($workouts as $workout){
 $wid = $workout['workout_id'];}
 $notes = "'" . $_POST['notes'] . "'";
 saveUserNotes($id, $wid, $notes);
-echo "Workout Saved. To see all previous workouts press a href='existing_user_info.php?id=" . $id . "'>here.</a>";
+echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $id . "'>here.</a>";
 
 }
 
