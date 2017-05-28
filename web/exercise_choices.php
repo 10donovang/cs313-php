@@ -45,6 +45,15 @@ foreach($routines as $routine){
 		echo $routine['workout_10'] . "<br>";
 }
 echo "</p>";
+echo'
+        <form action="new_user.php" method="POST">
+    <input type="submit" value="New User">
+    </form>';
+
+echo'
+    <form action="existing_user.php" method="POST">
+    <input type="submit" value="Existing User">
+    </form>';
 }
           ?>
         </body>
