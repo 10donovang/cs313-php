@@ -14,7 +14,7 @@ $user = "'" . $_POST['uname'] . "'";
 $pass = "'" . $_POST['pass'] . "'";
 $user = getUser($user, $pass);
 
-print_r(array_values($user));
+$id = $user['user_id'];
 
 
 
