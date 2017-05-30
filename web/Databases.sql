@@ -125,3 +125,180 @@ NEXTVAL('users_s1')
 , 'Gregory'
 , current_date
 );
+
+ALTER TABLE users
+ADD COLUMN user_name VARCHAR,
+ADD COLUMN password VARCHAR;
+
+UPDATE users
+SET user_name = '10donovang'
+WHERE
+first_name = 'Donovan';
+
+UPDATE users
+SET password = 'password'
+WHERE
+first_name = 'Donovan';
+
+ALTER TABLE users
+ALTER COLUMN user_name SET NOT NULL,
+ALTER COLUMN password SET NOT NULL;
+
+INSERT INTO workouts VALUES(
+NEXTVAL('workouts_s1')
+, 'Cardio'
+, 'Coconut'
+, 'Cardio'
+, 'Short'
+);
+
+INSERT INTO workout_routine VALUES(
+NEXTVAL('routine_s1')
+, CURRVAL('workouts_s1')
+, 'Battle Ropes'
+, 'Med Ball Slams'
+, 'Sledgehammer Slings'
+, 'Bike Sprints'
+, 'Jump Rope'
+, 'Do each workout'
+, 'for 1 min. 3 times'
+);
+
+INSERT INTO workouts VALUES(
+NEXTVAL('workouts_s1')
+, 'Cardio'
+, 'Power Hour'
+, 'Cardio'
+, 'Long'
+);
+
+INSERT INTO workout_routine VALUES(
+NEXTVAL('routine_s1')
+, CURRVAL('workouts_s1')
+, 'Warm Up: 5 min'
+, 'Hammer Time 15 min'
+, 'Farmers Walk 15 min'
+, 'Tire Flipping 15 min'
+, 'Cool Down'
+);
+
+INSERT INTO workouts VALUES(
+NEXTVAL('workouts_s1')
+, 'Cardio'
+, 'Running'
+, 'Cardio'
+, 'Med'
+);
+
+INSERT INTO workout_routine VALUES(
+NEXTVAL('routine_s1')
+, CURRVAL('workouts_s1')
+, 'Warm Up Run'
+, '20 phush-ups'
+, '100 meter run'
+, '20 crunches'
+, '100 meter run'
+, '20 burpees'
+, '100 meter run'
+, '2 jumping jacks'
+, 'Repeat until tired.'
+);
+
+INSERT INTO workouts VALUES(
+NEXTVAL('workouts_s1')
+, 'Muscle Building'
+, 'Back'
+, 'Muscle Building'
+, 'Short'
+);
+
+INSERT INTO workout_routine VALUES(
+NEXTVAL('routine_s1')
+, CURRVAL('workouts_s1')
+, 'Deadlift 3:10'
+, 'Pulldown 3:10'
+, 'Dumbbell Row 3:10'
+, 'Preacher Curls 3:10'
+, 'Incline DB Curls3:10'
+, 'Record Weight'
+);
+
+INSERT INTO workouts VALUES(
+NEXTVAL('workouts_s1')
+, 'Muscle Building'
+, 'Shoulder'
+, 'Muscle Building'
+, 'Long'
+);
+
+INSERT INTO workout_routine VALUES(
+NEXTVAL('routine_s1')
+, CURRVAL('workouts_s1')
+, 'Seated Db Press 3:10'
+, 'Seated Db Press 3:10'
+, 'Incline Db Press3:10'
+, 'Lateral Raise 3:10'
+, 'Pec Dec 3:10'
+, 'Reverse Pec Dec 3:10'
+, 'Db Skullcrushers3:10'
+,'Db Shrugs 3:10'
+, 'Record Weight'
+);
+
+INSERT INTO workouts VALUES(
+NEXTVAL('workouts_s1')
+, 'Muscle Building'
+, 'Ab'
+, 'Muscle Building'
+, 'Short'
+);
+
+INSERT INTO workout_routine VALUES(
+NEXTVAL('routine_s1')
+, CURRVAL('workouts_s1')
+, 'Ab Crunch 3:15'
+, 'Side Crunch 3:15:2'
+, 'Lying Leg Raise 3:12'
+, 'Lateral Raise 3:10'
+, 'Russian Twist 3:10:2'
+, 'Plank 3:20 secs'
+);
+
+INSERT INTO workouts VALUES(
+NEXTVAL('workouts_s1')
+, 'Muscle Building'
+, 'Leg'
+, 'Muscle Building'
+, 'Short'
+);
+
+INSERT INTO workout_routine VALUES(
+NEXTVAL('routine_s1')
+, CURRVAL('workouts_s1')
+, 'Squat 3:10'
+, 'Reverse Lunge 3:10'
+, 'Hamstring Curls 3:10'
+, 'Leg Press 3:10'
+, 'Calf Raise 3:10'
+);
+
+INSERT INTO workouts VALUES(
+NEXTVAL('workouts_s1')
+, 'Muscle Building'
+, 'Back and Tri'
+, 'Muscle Building'
+, 'Med'
+);
+
+INSERT INTO workout_routine VALUES(
+NEXTVAL('routine_s1')
+, CURRVAL('workouts_s1')
+, 'Pullup 3:10'
+, 'Seated Row 3:10'
+, 'Db Pullover 3:10'
+, 'Hammer Curl 3:10'
+, 'Tri Extension 3:10'
+, 'Cable Curls 3:10'
+, 'Tricep Pushdown 3:10'
+, 'Db Shrugs 3:10'
+);

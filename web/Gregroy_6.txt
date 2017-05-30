@@ -1,0 +1,28 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+https://calm-depths-42678.herokuapp.com/exercise_mainpage.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/10donovang/cs313-php
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+I have included a page to create a user name and password to save your workout data. I have also created a page to save your workout informatin and notes based off of your user name and password. Then there is a section to view your previous notes. 
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+Everything seems to be working fine, though I do need to seriously work on style this week. 
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+I think the collest thing I realized was how easy it was to play with your database if you already know how to code in sql. I also learned some fun debugging tricks. 
+
+6. What is a benefit of having a foreign key constraint?
+It links your tables together making them easier to access in some ways. 
+
+7. Please select the category you feel best describes your assignment:
+
+D - Meets requirements
+
+
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+I did everything require to complete the insertion process. Now I just need to expand on a few things for next week and make it look pretty for this assignment to be completely done. 

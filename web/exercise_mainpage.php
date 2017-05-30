@@ -14,6 +14,8 @@ ini_set("display_errors", 1);
         <form action="exercise_choices.php" method="POST">
     <select name="type">
     <option value="Cross Fit">Cross Fit</option>
+     <option value="Cardio">Cardio</option>
+      <option value="Muscle Building">Muscle Building</option>
     </select>
     <select name="time">
     <option value="Long">Long</option>
