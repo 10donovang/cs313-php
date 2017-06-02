@@ -31,8 +31,9 @@ $id = $_GET['id'];
 $data = getInfo($id);
 foreach($data as $input){
     $workout = getWorkout($input['workout_id']);
-echo $input['workout_date'] . ": " . $input['workout_notes'] . "The workout you did today is:" . $workout['workout_name'] . "<br><br>";
-}
+    foreach($workout as $name){
+echo $input['workout_date'] . ": " . $input['workout_notes'] . "The workout you did today is:" . $name['workout_name'] . "<br><br>";
+}}
  }
 
 
