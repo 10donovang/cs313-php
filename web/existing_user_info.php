@@ -14,7 +14,7 @@ $user = "'" . $_POST['uname'] . "'";
 $pass = "'" . $_POST['pass'] . "'";
 $users = getUser($user, $pass);
 foreach($users as $user){
-    echo $user['user_id']
+    echo $user['user_id'];
 $id = $user['user_id'];}
 $wname = "'" . $_POST['wname'] . "'";
 $workouts = getWorkoutByName($wname);
