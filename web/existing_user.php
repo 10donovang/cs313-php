@@ -14,10 +14,10 @@ $message = '';
 //Verify Login
 if(isset($_POST['username']) && $_POST['password'])
         {
-            $username = "'" . filter_input(INPUT_POST,'username') . "'";
+            $username =  filter_input(INPUT_POST,'username');
             $password = filter_input(INPUT_POST,'password');
             $wname = filter_input(INPUT_POST,'wname');
-            $notes = "'" . filter_input(INPUT_POST,'notes') . "'";
+            $notes = filter_input(INPUT_POST,'notes');
             $workouts = getWorkoutByName($wname);
 			foreach($workouts as $workout){
 			$wid = $workout['workout_id'];}
