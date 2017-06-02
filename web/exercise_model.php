@@ -29,6 +29,16 @@ function getWorkoutByName($name){
     return $routine;
 }
 
+function getWorkoutById($id){
+    global $db;
+    $query = "SELECT * FROM workouts WHERE workout_id = $id";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $routine = $statement->fetchAll();
+    $statement->closeCursor();
+    return $routine;
+}
+
 function saveUser($first, $middle, $last, $user, $pass){
     global $db;
     $query = "INSERT INTO users VALUES (NEXTVAL('users_s1')

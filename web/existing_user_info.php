@@ -30,7 +30,7 @@ echo "To go back to workout selection press <a href='exercise_mainpage.php'> her
 $id = $_GET['id'];
 $data = getInfo($id);
 foreach($data as $input){
-    $workout = getWorkout($input['workout_id']);
+    $workout = getWorkoutById($input['workout_id']);
     foreach($workout as $name){
 echo $input['workout_date'] . ": " . $input['workout_notes'] . "The workout you did today is:" . $name['workout_name'] . "<br><br>";
 }}
