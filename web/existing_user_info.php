@@ -14,7 +14,6 @@ $user = "'" . $_POST['uname'] . "'";
 $pass = "'" . $_POST['pass'] . "'";
 $users = getUser($user, $pass);
 foreach($users as $user){
-    echo $user['user_id'];
 $id = $user['user_id'];}
 $wname = "'" . $_POST['wname'] . "'";
 $workouts = getWorkoutByName($wname);
@@ -31,7 +30,8 @@ echo "To go back to workout selection press <a href='exercise_mainpage.php'> her
 $id = $_GET['id'];
 $data = getInfo($id);
 foreach($data as $input){
-echo $input['workout_date'] . ": " . $input['workout_notes'] . "<br><br>";
+    $workout = getWorkout($input['workout_id']);
+echo $input['workout_date'] . ": " . $input['workout_notes'] . "The workout you did today is:" . $workout['workout_name'] . "<br><br>";
 }
  }
 
