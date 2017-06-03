@@ -14,7 +14,7 @@ $message = '';
 //Verify Login
 if(isset($_POST['username']) && $_POST['password'])
         {
-            $username =   filter_input(INPUT_POST,'username');
+            $username =  "'"  . filter_input(INPUT_POST,'username') . "'";
             echo $username;
             $password = filter_input(INPUT_POST,'password');
             $wname = "'" . filter_input(INPUT_POST,'wname') . "'";
