@@ -26,17 +26,9 @@ $username =   filter_input(INPUT_POST,'username');
             $id = $users['user_id'];}
             saveUserNotes($id, $wid, $notes);
 
-//Check session info
-if(isset($username))
-{
+if(!isset($_GET['id'])){
     echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $id . "'>here.</a><br>";
     echo "To go back to workout selection press <a href='exercise_mainpage.php'> here. </a>";
-}
-
-else
-{
-    header("Location:existing_user.php");
-    die();
 }
 
 if(isset($_GET['id'])){
