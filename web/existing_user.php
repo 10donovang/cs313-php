@@ -21,7 +21,7 @@ if(isset($_POST['username']) && $_POST['password'])
             $workouts = getWorkoutByName($wname);
 			foreach($workouts as $workout){
 			$wid = $workout['workout_id'];}
-			
+			print_r(arry_values($workouts));
 			
             $user = verifyLogin($username);
             foreach($user as $users){
@@ -33,6 +33,7 @@ if(isset($_POST['username']) && $_POST['password'])
                 if(password_verify($password,$db_pass))
                 {
                     $_SESSION["auth_username"] = $userInfo['username'];
+                     $_SESSION["user_id"] = $userInfo['user_id'];
                     header("Location:existing_user_info.php");
                     die();
                 }
