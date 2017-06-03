@@ -1,32 +1,30 @@
-<!DOCTYPE html>
-<html>
-        <body>
-        <?php
+<?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+require ('exercise_model.php');
+require ('connect.php');
+//Start Session
+session_start();
 
-		
-        require ('exercise_model.php');
-        require ('connect.php');
-         if(!isset($_GET['id'])){
-$user = "'" . $_POST['uname'] . "'";
-$pass = "'" . $_POST['pass'] . "'";
-$users = getUser($user, $pass);
-foreach($users as $user){
-$id = $user['user_id'];}
-$wname = "'" . $_POST['wname'] . "'";
-$workouts = getWorkoutByName($wname);
-foreach($workouts as $workout){
-$wid = $workout['workout_id'];}
-$notes = "'" . $_POST['notes'] . "'";
-saveUserNotes($id, $wid, $notes);
-echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $id . "'>here.</a><br>";
-echo "To go back to workout selection press <a href='exercise_mainpage.php'> here. </a>";
+//Set username variable
+$username = $_SESSION['auth_username'];
+$id = $_SESSION['user_id'];
 
+//Check session info
+if(isset($username))
+{
+    echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $id . "'>here.</a><br>";
+    echo "To go back to workout selection press <a href='exercise_mainpage.php'> here. </a>";
 }
 
- if(isset($_GET['id'])){
+else
+{
+    header("Location:existing_user.php");
+    die();
+}
+
+if(isset($_GET['id'])){
 $id = $_GET['id'];
 $data = getInfo($id);
 foreach($data as $input){
@@ -35,10 +33,15 @@ foreach($data as $input){
 echo $input['workout_date'] . ": " . $input['workout_notes'] . "The workout you did today is: " . $name['workout_name'] . "<br><br>";
 }}
  }
+?>
+<!DOCTYPE html>
+<html>
 
+    
+    
+    <body>
+    
+        
+    </body>
 
-
-
-        ?>
-        </body>
-        </html>
+</html>
