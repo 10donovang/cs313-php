@@ -42,12 +42,12 @@ if(isset($_POST['username']) && $_POST['password'])
                     header("Location:existing_user_info.php");
                     die();
                 }
-                else
+               /* else
                 {
                     $message = "Login failed. Please try again.";
                     header("Location:exercise_model.php");
                     die();
-                }
+                } */
             }
         }
 else
