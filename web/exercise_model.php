@@ -55,7 +55,7 @@ function saveUser($first, $middle, $last, $user, $pass){
 
 function verifyLogin($username){
     global $db;
-    $query = "SELECT * FROM users WHERE user_name = $username";
+    $query = "SELECT * FROM users WHERE user_name like $username";
     $statement = $db->prepare($query);
     $statement->execute();
     $user = $statement->fetchAll();
