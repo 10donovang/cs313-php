@@ -17,17 +17,17 @@ $username =   filter_input(INPUT_POST,'username');
             $workouts = getWorkoutByName($wname);
             
             foreach($workouts as $workout){
-            $wid = $workout['workout_id'];}
+            $_SESSION["wid"] = $workout['workout_id'];}
             
             
             $user = verifyLogin($uname);
             
             foreach($user as $users){
-            $id = $users['user_id'];}
-            saveUserNotes($id, $wid, $notes);
+            $_SESSION["id"] = $users['user_id'];}
+            saveUserNotes($_SESSION["id"], $_SESSION["wid"], $notes);
 
 if(!isset($_GET['id'])){
-    echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $id . "'>here.</a><br>";
+    echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $_SESSION["id"] . "'>here.</a><br>";
     echo "To go back to workout selection press <a href='exercise_mainpage.php'> here. </a>";
 }
 
