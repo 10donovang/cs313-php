@@ -6,8 +6,8 @@ require ('exercise_model.php');
         require ('connect.php');
 
 //Some post variables
-$fname = filter_input(INPUT_POST,'fname');
-$mname = filter_input(INPUT_POST,'mname');
+$fname =  filter_input(INPUT_POST,'fname');
+$mname =  filter_input(INPUT_POST,'mname');
 $lname = filter_input(INPUT_POST,'lname');
 $username = filter_input(INPUT_POST,'username');
 $password = filter_input(INPUT_POST,'pass');
