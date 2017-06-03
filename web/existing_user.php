@@ -21,7 +21,7 @@ if(isset($_POST['username']) && $_POST['password'])
             $workouts = getWorkoutByName($wname);
 			foreach($workouts as $workout){
 			$wid = $workout['workout_id'];}
-			print_r(arry_values($workouts));
+			print_r(array_values($workouts));
 			
             $user = verifyLogin($username);
             foreach($user as $users){
