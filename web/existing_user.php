@@ -20,9 +20,10 @@ if(isset($_POST['username']) && $_POST['password'])
             $notes = filter_input(INPUT_POST,'notes');
             echo $username . $password . $wname . $notes;
             $workouts = getWorkoutByName($wname);
+            print_r(array_values($workouts));
 			foreach($workouts as $workout){
 			$wid = $workout['workout_id'];}
-			print_r(array_values($workouts));
+			
 			
             $user = verifyLogin($username);
             foreach($user as $users){
