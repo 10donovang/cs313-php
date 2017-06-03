@@ -8,8 +8,23 @@ require ('connect.php');
 session_start();
 
 //Set username variable
-$username = $_SESSION['auth_username'];
-$id = $_SESSION['user_id'];
+$username =   filter_input(INPUT_POST,'username');
+            $uname = "'" . $username . "'";
+            $password = filter_input(INPUT_POST,'password');
+            $wname = "'" . filter_input(INPUT_POST,'wname') . "'";
+            $notes = filter_input(INPUT_POST,'notes');
+            
+            $workouts = getWorkoutByName($wname);
+            
+            foreach($workouts as $workout){
+            $wid = $workout['workout_id'];}
+            
+            
+            $user = verifyLogin($uname);
+            print_r(array_values($user));
+            foreach($user as $users){
+            $id = $users['user_id'];}
+            saveUserNotes($id, $wid, $notes);
 
 //Check session info
 if(isset($username))

@@ -63,7 +63,7 @@ else
     <section>
         <?php echo $message; ?>
         
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+        <form method="post" action="existing_user_info.php">
             <p>Username: <input type="text" name="username"></p>
             <p>Password: <input type="password" name="password"></p>
             <p>Workout Name: <input type="text" name="wname"></p>
