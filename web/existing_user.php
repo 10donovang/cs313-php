@@ -27,7 +27,7 @@ if(isset($_POST['username']) && $_POST['password'])
 			$wid = $workout['workout_id'];}
 			
 			
-            $user = verifyLogin($username);
+            $user = verifyLogin($uname);
             print_r(array_values($user));
             foreach($user as $users){
 			$id = $users['user_id'];}
@@ -45,7 +45,7 @@ if(isset($_POST['username']) && $_POST['password'])
                 else
                 {
                     $message = "Login failed. Please try again.";
-                    header("Location:existing_user.php");
+                    header("Location:exercise_model.php");
                     die();
                 }
             }
