@@ -12,7 +12,7 @@ $username =   filter_input(INPUT_POST,'username');
             $uname = "'" . $username . "'";
             $password = filter_input(INPUT_POST,'password');
             $wname = "'" . filter_input(INPUT_POST,'wname') . "'";
-            $notes = filter_input(INPUT_POST,'notes');
+            $notes = "'" . filter_input(INPUT_POST,'notes') . "'";
             
             $workouts = getWorkoutByName($wname);
             
@@ -21,7 +21,7 @@ $username =   filter_input(INPUT_POST,'username');
             
             
             $user = verifyLogin($uname);
-            print_r(array_values($user));
+            
             foreach($user as $users){
             $id = $users['user_id'];}
             saveUserNotes($id, $wid, $notes);
