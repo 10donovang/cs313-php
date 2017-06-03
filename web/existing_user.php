@@ -16,7 +16,7 @@ if(isset($_POST['username']) && $_POST['password'])
         {
             $username =  filter_input(INPUT_POST,'username');
             $password = filter_input(INPUT_POST,'password');
-            $wname = filter_input(INPUT_POST,'wname');
+            $wname = "'" . filter_input(INPUT_POST,'wname') . "'";
             $notes = filter_input(INPUT_POST,'notes');
             echo $username . $password . $wname . $notes;
             $workouts = getWorkoutByName($wname);
