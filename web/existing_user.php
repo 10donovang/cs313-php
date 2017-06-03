@@ -11,6 +11,7 @@ require ('exercise_model.php');
         require ('connect.php');
 
 $message = '';
+echo $message;
 //Verify Login
 if(isset($_POST['username']) && $_POST['password'])
         {
