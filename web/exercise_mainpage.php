@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
         <body>
         <?php
 error_reporting(E_ALL);
@@ -9,7 +12,7 @@ ini_set("display_errors", 1);
 		
         require ('exercise_model.php');
         require ('connect.php');
-        echo "<h1><strong>Workout Selection</strong></h1>";  
+        echo "<div class="center"><h1><strong>Workout Selection</strong></h1>";  
         echo'
         <form action="exercise_choices.php" method="POST">
     <select name="type">
@@ -24,7 +27,7 @@ ini_set("display_errors", 1);
     </select>
     <br><br>
     <input type="submit">
-    </form>';
+    </form></div>';
 
    
         ?>
