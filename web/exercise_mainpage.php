@@ -12,8 +12,8 @@ ini_set("display_errors", 1);
 		
         require ('exercise_model.php');
         require ('connect.php');
-        echo "<div class="center"><h1><strong>Workout Selection</strong></h1></div>";  
-        echo'<div class="center">
+        echo "<div class='center'><h1><strong>Workout Selection</strong></h1>";  
+        echo'
         <form action="exercise_choices.php" method="POST">
     <select name="type">
     <option value="Cross Fit">Cross Fit</option>
