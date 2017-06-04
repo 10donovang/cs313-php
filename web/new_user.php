@@ -52,10 +52,12 @@ if (isset($password) && isset($vpass) && isset($username))
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
     <title>Signup Page</title>
     </head>
 <body>
 <script src="check.js"></script>
+<div class='center'>
 <section>
     
     <h1>Please fill in your information below to signup</h1>
@@ -96,6 +98,7 @@ if (isset($password) && isset($vpass) && isset($username))
     </form>
     
     </section>
+    </div>
 </body>
 </html>
 
