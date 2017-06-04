@@ -55,13 +55,14 @@ if (isset($password) && isset($vpass) && isset($username))
     <title>Signup Page</title>
     </head>
 <body>
+<script src="check.js"></script>
 <section>
     
     <h1>Please fill in your information below to signup</h1>
     
     <?php echo $message; ?>
     
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" onsubmit="return checkForm(this);">
         
         <p>First Name: <input type="text" name="fname"></p>
         	<?php echo $emphasis; ?>
