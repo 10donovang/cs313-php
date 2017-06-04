@@ -31,7 +31,7 @@ $username =   filter_input(INPUT_POST,'username');
             saveUserNotes($_SESSION["id"], $_SESSION["wid"], $notes);}
             else {
                 $message = "Login failed. Please try again.";
-                header("Location:login.php");
+                header("Location:existing_user.php");
                     die();
             }
 
