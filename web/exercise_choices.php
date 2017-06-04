@@ -13,7 +13,7 @@ ini_set("display_errors", 1);
  $time = "'" . $_POST['time'] . "'";
     $type = "'" . $_POST['type'] . "'";
     $workouts = getWorkoutChoice($time, $type);
-    echo "<div class='center'><h1>This is your optimal workout choices!<h1>"
+    echo "<div class='center'><h1>This is your optimal workout choices!<h1>";
         foreach($workouts as $workout){
             echo "<p><strong><a href='exercise_choices.php?id=" . $workout['workout_id'] . "'>" .  $workout['workout_name'] . "</a></strong>:" . $workout['workout_type'] . " " . $workout['duration'] ."</p></div>";
         }
