@@ -36,8 +36,8 @@ $username =   filter_input(INPUT_POST,'username');
             }
 
 
-    echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $_SESSION["id"] . "'>here.</a><br>";
-    echo "To go back to workout selection press <a href='exercise_mainpage.php'> here. </a>";
+    echo "<div class='center'>Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $_SESSION["id"] . "'>here.</a><br>";
+    echo "To go back to workout selection press <a href='exercise_mainpage.php'> here. </a></div>";
 }
 
 if(isset($_GET['id'])){
@@ -52,7 +52,9 @@ echo $input['workout_date'] . ": " . $input['workout_notes'] . " The workout you
 ?>
 <!DOCTYPE html>
 <html>
-
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
     
     
     <body>
