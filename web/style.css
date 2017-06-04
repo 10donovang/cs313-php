@@ -1,5 +1,5 @@
 .center {
-    position: absolute;
+    float: center;
     width: 100px;
     height: 50px;
     top: 50%;
