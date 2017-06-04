@@ -6,6 +6,8 @@ require ('exercise_model.php');
 require ('connect.php');
 //Start Session
 session_start();
+$message = '';
+echo $message;
 if(!isset($_GET['id'])){
 //Set username variable
 $username =   filter_input(INPUT_POST,'username');
@@ -23,8 +25,15 @@ $username =   filter_input(INPUT_POST,'username');
             $user = verifyLogin($uname);
             
             foreach($user as $users){
-            $_SESSION["id"] = $users['user_id'];}
-            saveUserNotes($_SESSION["id"], $_SESSION["wid"], $notes);
+            $_SESSION["id"] = $users['user_id'];
+            $db_pass = $users['password'];}
+            if(password_verify($password = $db_pass)){}
+            saveUserNotes($_SESSION["id"], $_SESSION["wid"], $notes);}
+            else {
+                $message = "Login failed. Please try again.";
+                header("Location:login.php");
+                    die();
+            }
 
 
     echo "Workout Saved. To see all previous workouts press <a href='existing_user_info.php?id=" . $_SESSION["id"] . "'>here.</a><br>";
