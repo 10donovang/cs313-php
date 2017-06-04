@@ -27,7 +27,7 @@ $username =   filter_input(INPUT_POST,'username');
             foreach($user as $users){
             $_SESSION["id"] = $users['user_id'];
             $db_pass = $users['password'];}
-            if(password_verify($password = $db_pass)){
+            if(password_verify($password, $db_pass)){
             saveUserNotes($_SESSION["id"], $_SESSION["wid"], $notes);}
             else {
                 $message = "Login failed. Please try again.";
