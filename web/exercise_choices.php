@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
         <body>
         <?php
 error_reporting(E_ALL);
@@ -22,7 +25,7 @@ $id =  $_GET['id'];
 
 $routines = getWorkout($id);
 foreach($routines as $routine){
-	echo "<p>";
+	echo "<div class='center'><p>";
 	if($routine['workout_1'] != null)
 		echo $routine['workout_1'] . "<br>";
 	if($routine['workout_2'] != null)
@@ -53,7 +56,7 @@ echo'
 echo'
     <form action="existing_user.php" method="POST">
     <input type="submit" value="Existing User">
-    </form>';
+    </form></div>';
 }
           ?>
         </body>
