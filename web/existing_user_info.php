@@ -46,8 +46,9 @@ $data = getInfo($id);
 foreach($data as $input){
     $workout = getWorkoutById($input['workout_id']);
     foreach($workout as $name){
-echo $input['workout_date'] . ": " . $input['workout_notes'] . " The workout you did today is: " . $name['workout_name'] . "<br><br>";
+echo "<div class='center'>" . $input['workout_date'] . ": " . $input['workout_notes'] . " The workout you did today is: " . $name['workout_name'] . "<br><br>";
 }}
+echo "</div>"
  }
 ?>
 <!DOCTYPE html>

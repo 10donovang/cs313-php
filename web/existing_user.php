@@ -9,57 +9,18 @@ ini_set("display_errors", 1);
 //Dependencies
 require ('exercise_model.php');
         require ('connect.php');
-
-$message = '';
-
-//Verify Login
-if(isset($_POST['username']) && $_POST['password'])
-        {
-            $username =   filter_input(INPUT_POST,'username');
-            $uname = "'" . $username . "'";
-            $password = filter_input(INPUT_POST,'password');
-            $wname = "'" . filter_input(INPUT_POST,'wname') . "'";
-            $notes = filter_input(INPUT_POST,'notes');
-            
-            $workouts = getWorkoutByName($wname);
-            
-			foreach($workouts as $workout){
-			$wid = $workout['workout_id'];}
-			
-			
-            $user = verifyLogin($uname);
-            print_r(array_values($user));
-            foreach($user as $users){
-			$id = $users['user_id'];}
-			saveUserNotes($id, $wid, $notes);
-            foreach ($user as $userInfo)
-            {
-                $db_pass = $userInfo['password'];
-                if(password_verify($password,$db_pass))
-                {
-                    $_SESSION["auth_username"] = $userInfo['username'];
-                     $_SESSION["user_id"] = $userInfo['user_id'];
-                    header("Location:existing_user_info.php");
-                    die();
-                }
-               /* else
-                {
-                    $message = "Login failed. Please try again.";
-                    header("Location:exercise_model.php");
-                    die();
-                } */
-            }
-        }
-else
-{
     ?>
 
 <!DOCTYPE html>
 <html>
        <head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
     <title>Login Page</title>
 </head>
 <body>
+<div class='center'>
     <section>
         <?php echo $message; ?>
         
@@ -72,13 +33,12 @@ else
         </form>
         
     </section>
+    </div>
     
 </body>
 
 </html>
-<?php
-}
-?>
+
 
 
 
